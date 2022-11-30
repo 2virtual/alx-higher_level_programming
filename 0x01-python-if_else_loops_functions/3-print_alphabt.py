@@ -1,4 +1,11 @@
 #!/usr/bin/python3
-for letter in range(97, 123):
-    if chr(letter) is not 'q' and chr(letter) is not 'e':
-        print("{}".format(chr(letter)), end="")
+
+
+def print_low_alpha_ex():
+    for n in range(97, 123):
+        if n != 101 and n != 113:
+            print('{}'.format(chr(n)), end='')
+
+
+if __name__ == '__main__':
+    print_low_alpha_ex()
