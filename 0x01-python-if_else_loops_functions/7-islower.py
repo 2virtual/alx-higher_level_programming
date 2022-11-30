@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 
-if __name__ == '__main__':
-    for n in range(100):
-        if n != 99:
-            print('{:02d}'.format(n), end=', ')
-        else:
-            print('{:02d}'.format(n))
+def islower(c):
+    """Check for lowercase characters."""
+    if ord(c) >= 97 and ord(c) <= 122:
+        return True
+    else:
+        return False
