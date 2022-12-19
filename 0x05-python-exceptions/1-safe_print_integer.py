@@ -1,27 +1,17 @@
 #!/usr/bin/python3
+# 1-safe_print_integer.py
 
 
 def safe_print_integer(value):
+    """Print an integer with "{:d}".format().
+    Args:
+        value (int): The integer to print.
+    Returns:
+        If a TypeError or ValueError occurs - False.
+        Otherwise - True.
+    """
     try:
-        print('{:d}'.format(value))
-        return True
-    except ValueError:
-        return False
-    except TypeError:
-        return False
-
-if __name__ == '__main__':
-    value = 89
-    has_been_print = safe_print_integer(value)
-    if not has_been_print:
-        print("{} is not an integer".format(value))
-
-    value = -89
-    has_been_print = safe_print_integer(value)
-    if not has_been_print:
-        print("{} is not an integer".format(value))
-
-    value = "Holberton"
-    has_been_print = safe_print_integer(value)
-    if not has_been_print:
-        print("{} is not an integer".format(value))
+        print("{:d}".format(value))
+        return (True)
+    except (TypeError, ValueError):
+        return (False)
